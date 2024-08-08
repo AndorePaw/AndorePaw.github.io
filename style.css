@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://i.ibb.co.com/zsb3XYL/quality-restoration-20240613011947865-picsay.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background-size: cover;
+  background: rgb(0, 179, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+}

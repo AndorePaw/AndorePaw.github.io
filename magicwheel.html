@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGIC WHEEL CALCULATOR</title>
+    <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://i.ibb.co.com/zsb3XYL/quality-restoration-20240613011947865-picsay.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background-size: cover;
+  background: rgb(0, 179, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MAGIC WHEEL CALCULATOR</h1>
+            <h2>Created by Ft. Need</h2>
+        </header>
+        <main>
+            <label for="currentCore">Magic Core Saat Ini:</label>
+            <input type="number" id="currentCore" placeholder="Masukkan Magic Core Saat Ini">
+            <label for="targetCore">Target Magic Core:</label>
+            <input type="number" id="targetCore" placeholder="Masukkan Target Magic Core">
+            <button onclick="calculateDiamonds()">Calculate</button>
+            <p id="result"></p>
+        </main>
+    </div>
+    <script>
+function calculateDiamonds() {
+    const currentCore = parseInt(document.getElementById('currentCore').value, 10);
+    const targetCore = parseInt(document.getElementById('targetCore').value, 10);
+    const corePerSpin = 1; // 1 Magic Core per spin
+    const diamondsPerSpin = 60; // 60 diamonds per spin
+
+    if (isNaN(currentCore) || isNaN(targetCore) || currentCore < 0 || targetCore <= currentCore) {
+        document.getElementById('result').textContent = 'Please enter valid Magic Core values.';
+        return;
+    }
+
+    const requiredCore = targetCore - currentCore;
+    const requiredDiamonds = requiredCore * diamondsPerSpin / corePerSpin;
+
+    document.getElementById('result').textContent = `Kamu membutuhkan maksimal ${requiredDiamonds} diamond untuk mendapatkan ${targetCore} Magic Core.`;
+}
+</script>
+</body>
+</html>
